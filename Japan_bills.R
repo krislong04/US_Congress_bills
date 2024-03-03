@@ -31,13 +31,13 @@ library(stringr)
 # further. You can theoretically download up to 5,000 results at a time, but in my 
 # experience any more than 2,000 crashes your browser. If you need more than 2,000 
 # observations download them in separate files and use the "join" function (not in this 
-# code file but just, like Google it). Use the download button on the top left 
-# side to download as a csv. When you click the download button it will let you pick 
-# which variables you would like to download. It is not a good idea to download every 
-# variable because it will  create a very large file that's difficult to manage, 
-# so only pick the ones you need. Save it in the file you're using as your working 
-# directory. This code assumes you use "Sponsor", "Sponsor Party", "Date of Introduction", 
-# and "Last Action Date", but the general format should work for any variables.
+# code file but just Google it). Use the download button on the top left side to download 
+# as a csv. When you click the download button it will let you pick which variables you 
+# would like to download. It is not a good idea to download every  variable because it will
+# create a very large file that's difficult to manage, so only pick the ones you need. Save 
+# it in the file you're using as your working  directory. This code assumes you use "Sponsor", 
+# "Sponsor Party", "Date of Introduction", and "Last Action Date", but the general format 
+# should work for any variables.
 
 # Load data
 Bills <- read_csv("Japan_bills.csv")
@@ -89,7 +89,6 @@ Bills <- read_xlsx("Japan_bills.xlsx")
 
 # Join first and last names, separated by commas, into one variable
 Bills <- unite(Bills, "spnsr_name", c("last_spnsr_name", "spnsr_name"), sep = ", ")
-
 
 # Remove weird stuff in front of their party identifier
 Bills$spnsr_name <- gsub("Sen.-","",as.character(Bills$spnsr_name))
