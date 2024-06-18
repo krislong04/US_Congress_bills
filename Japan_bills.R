@@ -30,7 +30,7 @@ library(stringr)
 # You can use the filter options on the left-hand side to narrow your search down
 # further. You can theoretically download up to 5,000 results at a time, but in my 
 # experience any more than 2,000 crashes your browser. If you need more than 2,000 
-# observations download them in separate files and use the "join" function (not in this 
+# observations download them in separate files and then bind the rows together (not in this 
 # code file but just Google it). Use the download button on the top left side to download 
 # as a csv. When you click the download button it will let you pick which variables you 
 # would like to download. It is not a good idea to download every  variable because it will
